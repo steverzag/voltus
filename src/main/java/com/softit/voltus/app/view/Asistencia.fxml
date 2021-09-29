@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="640.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.softit.voltus.app.controllers.AsistenciaController">
+   <children>
+      <TableView fx:id="tblAsistencia" layoutY="115.0" onMouseMoved="#tblAsistenciaOnMouseMoved" prefHeight="463.0" prefWidth="940.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="115.0">
+         <columns>
+            <TableColumn fx:id="colCliente" prefWidth="289.0" styleClass="column-left" text="Cliente" />
+            <TableColumn fx:id="colEntrada" minWidth="0.0" prefWidth="134.0" text="Entrada" />
+            <TableColumn fx:id="colSalida" minWidth="0.0" prefWidth="120.0" text="Salida" />
+            <TableColumn fx:id="colServicio" prefWidth="201.0" text="Servicio" />
+            <TableColumn fx:id="colEstado" prefWidth="173.0" text="Estado" />
+         </columns>
+         <tooltip>
+            <Tooltip fx:id="ttpAsistencia" text="Cliente" />
+         </tooltip>
+      </TableView>
+      <Label layoutX="20.0" layoutY="41.0" text="Filtrar por:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="40.0">
+         <font>
+            <Font name="Verdana" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtBuscar" layoutX="101.0" layoutY="36.0" prefHeight="25.0" prefWidth="330.0" promptText="Cliente" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="36.0">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <ComboBox fx:id="cbxServicio" layoutX="468.0" layoutY="36.0" prefHeight="25.0" prefWidth="166.0" promptText="Servicio" AnchorPane.leftAnchor="468.0" AnchorPane.topAnchor="36.0" />
+      <DatePicker fx:id="dpkDesde" layoutX="101.0" layoutY="80.0" prefHeight="25.0" promptText="Desde" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="80.0" />
+      <DatePicker fx:id="dpkHasta" layoutX="316.0" layoutY="80.0" prefHeight="25.0" promptText="Hasta" AnchorPane.leftAnchor="316.0" AnchorPane.topAnchor="80.0" />
+      <Button fx:id="btnFiltrar" layoutX="884.0" layoutY="80.0" mnemonicParsing="false" onAction="#btnFiltrarOAction" prefHeight="25.0" prefWidth="94.0" text="Filtrar" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="80.0">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8_filter_50px.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <ComboBox fx:id="cbxEstado" layoutX="659.0" layoutY="36.0" prefHeight="25.0" prefWidth="166.0" promptText="Estado" AnchorPane.leftAnchor="659.0" AnchorPane.topAnchor="36.0" />
+   </children>
+</AnchorPane>

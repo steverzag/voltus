@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="640.0" prefWidth="980.0" stylesheets="@voltusStyle.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.softit.voltus.app.controllers.OperacionesController">
+   <children>
+      <TableView fx:id="tblOperaciones" layoutX="-2.0" layoutY="132.0" onMouseClicked="#tblOperacionesOnClicked" prefHeight="463.0" prefWidth="940.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="120.0">
+        <columns>
+            <TableColumn fx:id="colOps" prefWidth="165.0" styleClass="column-left" text="Operacion" />
+          <TableColumn fx:id="colUsers" minWidth="0.0" prefWidth="120.0" text="Usuario" />
+            <TableColumn fx:id="colVal" minWidth="0.0" prefWidth="79.0" text="Valor" />
+          <TableColumn fx:id="colClient" prefWidth="152.0" styleClass="column-left" text="Cliente" />
+            <TableColumn fx:id="colObs" prefWidth="212.0" text="Observacion" />
+            <TableColumn fx:id="colDate" prefWidth="108.0" text="Fecha" />
+            <TableColumn fx:id="colCanc" prefWidth="82.0" text="Cancelada" />
+        </columns>
+      </TableView>
+      <Label layoutX="20.0" layoutY="41.0" text="Filtrar por:" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="40.0">
+         <font>
+            <Font name="Verdana" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtBuscar" layoutX="101.0" layoutY="36.0" prefHeight="25.0" prefWidth="330.0" promptText="Cliente" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="36.0">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <ComboBox fx:id="cbxUsuario" layoutX="468.0" layoutY="36.0" prefHeight="25.0" prefWidth="166.0" promptText="Usuario" AnchorPane.leftAnchor="468.0" AnchorPane.topAnchor="36.0" />
+      <DatePicker fx:id="dpkDesde" layoutX="101.0" layoutY="80.0" prefHeight="25.0" promptText="Desde" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="80.0" />
+      <DatePicker fx:id="dpkHasta" layoutX="316.0" layoutY="80.0" prefHeight="25.0" promptText="Hasta" AnchorPane.leftAnchor="316.0" AnchorPane.topAnchor="80.0" />
+      <Button fx:id="btnFiltrar" layoutX="875.0" layoutY="80.0" mnemonicParsing="false" onAction="#btnFiltrarOAction" prefHeight="25.0" prefWidth="85.0" text="Filtrar" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="80.0">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8_filter_50px.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="btnEditarOp" layoutX="794.0" layoutY="601.0" mnemonicParsing="false" onAction="#btnEditarOpOnAction" prefHeight="25.0" prefWidth="210.0" text="Cancelar/Abrir Operacion" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8_edit_50px.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <ComboBox fx:id="cbxOperacion" layoutX="659.0" layoutY="36.0" prefHeight="25.0" prefWidth="166.0" promptText="Operacion" AnchorPane.leftAnchor="659.0" AnchorPane.topAnchor="36.0" />
+      <Label fx:id="lblError" layoutX="498.0" layoutY="595.0" prefHeight="25.0" prefWidth="220.0" styleClass="label-error" stylesheets="@voltusStyle.css" text="Saldo  en Caja Insuficiente" visible="false" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="262.0">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8_no_cash_50px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+   </children>
+</AnchorPane>

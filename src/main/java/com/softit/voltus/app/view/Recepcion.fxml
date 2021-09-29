@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="640.0" prefWidth="980.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.softit.voltus.app.controllers.RecepcionController">
+   <children>
+      <BorderPane fx:id="pnlContainer" layoutX="20.0" layoutY="60.0" prefHeight="200.0" prefWidth="940.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <top>
+            <AnchorPane prefHeight="70.0" prefWidth="940.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btnEntrada" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#btnEntradaOnAction" prefHeight="69.0" prefWidth="313.0" style="-fx-background-radius: 20 0 0 0;" styleClass="button-nav" stylesheets="@voltusStyle.css" text="Entrada" AnchorPane.topAnchor="0.0">
+                     <graphic>
+                        <ImageView fitHeight="69.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons8_open_door_80px_1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="btnAlquiler" alignment="BASELINE_LEFT" layoutX="313.0" layoutY="1.0" mnemonicParsing="false" onAction="#btnAlquilerOnAction" prefHeight="69.0" prefWidth="313.0" styleClass="button-nav" stylesheets="@voltusStyle.css" text="Alquiler" AnchorPane.topAnchor="0.0">
+                     <graphic>
+                        <ImageView fitHeight="69.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons8_add_shopping_cart_80px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="btnSalida" alignment="BASELINE_LEFT" layoutX="626.0" layoutY="1.0" mnemonicParsing="false" onAction="#btnSalidaOnAction" prefHeight="69.0" prefWidth="314.0" style="-fx-background-radius: 0 20 0  0;" styleClass="button-nav" stylesheets="@voltusStyle.css" text="Salida" AnchorPane.topAnchor="0.0">
+                     <graphic>
+                        <ImageView fitHeight="69.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/icons8_output_80px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <Pane prefHeight="84.0" prefWidth="940.0" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

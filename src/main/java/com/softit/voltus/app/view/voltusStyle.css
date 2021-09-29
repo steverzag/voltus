@@ -1,0 +1,268 @@
+
+*{
+	-fx-text-fill: #dcdcdc;
+	-fx-font-height: 13.0px;
+	-fx-font-family: verdana;
+}
+#wrapper{
+	-fx-background-color: #222222;
+}
+#menu{
+	-fx-background-color: #ffff00;
+	-fx-background-radius: 0.0 60.0 0.0 0.0;
+}
+.panel-holder{
+	-fx-background-color: #db0;
+}
+.button{
+	-fx-padding: 0.0px;
+	-fx-background-color: #2a2a6a;
+}
+.button:hover{
+	-fx-background-color: #3f4f8f;
+}
+.button-green:hover{
+	-fx-background-color: green;
+}
+.button-red:hover{
+	-fx-background-color: red;
+}
+.menu-button{
+	-fx-background-color: transparent;
+	-fx-text-fill: #000000;
+	-fx-padding: 0.0px 0.0px 0.0px 30.0px;
+	-fx-font-size: 15px;
+}
+.menu-button:hover{
+	-fx-background-color: #FFCF00;
+}
+.button-enter{
+	-fx-background-color:#c0C5Ef;
+	-fx-background-radius:5.0;
+	-fx-text-fill:#4c4cbb;
+	-fx-border-color:#6f4cbb;
+	-fx-border-radius:5.0;
+}
+.button-enter:hover{
+	-fx-background-color:#e4eefd;
+}
+
+.special-button{
+	-fx-background-color: linear-gradient(to right, #8995ff, #9D5FF1);
+}
+.special-button:hover{
+	-fx-background-color: linear-gradient(to right, #7884dd, #8c4dd0);
+}
+.button-nav{
+	-padding-left: 0.0px;
+	-fx-background-color: linear-gradient(to bottom, #7884dd, #8c4dd0);
+	-fx-opacity: 0.3;
+	-fx-font-size: 15.0px;
+	-fx-font-style: italic;
+	-fx-background-radius: 0.0px;
+	-fx-border-radius: 0.0px;
+	-fx-text-fill: #fff;
+}
+
+.button-nav:hover{
+	-fx-background-color: linear-gradient(to bottom, #7884dd, #8c4dd0);
+	-fx-opacity: 0.5;
+}
+
+.button-nav-selectd{
+	-fx-background-color: linear-gradient(to bottom, #7884dd, transparent);
+	-fx-opacity: 1;
+}
+
+.button-nav-selectd:hover{
+	-fx-background-color: linear-gradient(to bottom, #7884dd, transparent);
+	-fx-opacity: 1;
+}
+
+.toggle-button{
+	-fx-padding: 0.0px;
+	-fx-background-color: transparent;
+	-fx-background-image: url("./images/icons8_eye_25px_1.png");
+	-fx-background-position: center;
+	-fx-background-repeat: no-repeat;
+}
+
+.toggle-button:selected{
+	-fx-background-image: url("./images/icons8_invisible_25px.png");
+	-fx-background-position: center;
+	-fx-background-repeat: no-repeat;
+}
+
+.label-black{
+	-fx-text-fill: #000;
+	-fx-font-height: 15.0px;
+	-fx-font-family: verdana;
+}
+#header{
+	-fx-background-color:#000;
+}
+
+.text-field, .text-area{
+	-fx-border-color: #dcdcdc;
+	-fx-border-radius: 3.0px;
+	-fx-background-color: transparent;
+	-fx-text-fill: #dcdcdc;
+	
+}
+
+.text-error{
+	-fx-border-color: #DB2B2F;
+}
+
+.combo-box{
+	-fx-background-color: #292939;
+}
+.combo-box .arrow{
+	-fx-background-color: #dcdcdc;
+}
+
+.list-cell{
+	-fx-background-color: #292939;
+}
+.list-cell:hover{
+	-fx-background-color: #59597a;
+}
+.label-error{
+	-fx-text-fill: #DB2B2F;
+}
+.main-input{
+	-fx-border-color: #dcdcdc;
+	-fx-border-radius: 15.0px;
+	-fx-background-radius: 15.0px;
+	-fx-background-color: transparent;
+	-fx-text-fill: #dcdcdc;
+}
+.main-input .input-line{
+	-fx-visibility: false;
+}
+
+.label-notification{
+	-fx-font-size: 12.0px;
+	-fx-text-fill: #fff;
+	-fx-background-color: #26f;
+	-fx-background-radius: 50.0%;
+}
+.btn-buscar{
+	-fx-border-color:#dcdcdc;
+	-fx-border-radius: 15.0px;
+	-fx-background-radius: 15.0px;
+	-fx-background-color: #000;
+	-fx-background-image: url("./images/icons8_search_25px.png");
+	-fx-background-position: center;
+	-fx-background-repeat: no-repeat;
+}
+.btn-buscar:hover{
+	-fx-background-color: #444;
+}
+.auto-complete-popup, .auto-complete-popup  * {
+	 -fx-background-color: #292939;
+	 -fx-border-width: 0px;
+}
+.auto-complete-popup .list-cell:filled:hover,
+.auto-complete-popup .list-cell:selected:hover {
+    -fx-background-color: #5a5a7a;
+}
+.table-view, .tree-table-view{
+	-fx-background-color: transparent;
+	-fx-background-radius: 10.0px;
+}
+.tree-table-row-cell:filled:selected, .table-row-cell:filled:selected{
+	-fx-background-color: #a8a522;
+}
+.tree-table-row-cell:filled:selected:hover, .table-row-cell:filled:selected:hover{
+	-fx-background-color: #a8a522;
+}
+.tree-table-row-cell:filled:hover, .table-row-cell:filled:hover{
+	-fx-background-color: #373737;
+}
+.scroll-bar{
+	-fx-background-color: #373737;
+}
+.scroll-bar .increment-arrow, .scroll-bar .decrement-arrow{
+	-fx-background-color: #dcdcdc;
+}
+.scroll-bar .increment-button:hover, .scroll-bar .decrement-button:hover{
+	-fx-background-color: #686879;
+}
+.scroll-bar .thumb{
+	-fx-background-color: #686879;
+	-fx-border-radius: 0px;
+	-fx-background-radius: 0px;
+	
+}
+.column-header-background{
+	-fx-background-color: linear-gradient(#292939 40%, transparent);
+	-fx-background-radius: 10.0px 10.0px 0.0px 0.0px;
+	
+}
+.column-header, .filler, .table-row-cell, .tree-table-row-cell, .corner, .scroll-pane, .scroll-pane .viewport,
+.chart-plot-background, .chart .chart-legend{
+	-fx-background-color: transparent;
+}
+
+.table-column {
+	-fx-alignment: center;
+}
+.column-left {
+	-fx-alignment: center-left;
+}
+
+.radio-button .radio{
+	-fx-background-color: transparent;
+	-fx-border-color: #dcdcdc;
+	-fx-border-radius: 50.0%;
+}
+.radio-button:selected .radio .dot{
+	-fx-background-color: #ffffff;
+}
+/*Spinner*/
+.spinner, .spinner .text-field, .spinner .increment-arrow-button, .spinner .decrement-arrow-button{
+	-fx-background-color: #292939;
+	-fx-border-width: 0px;
+}
+.spinner .increment-arrow-button:hover, .spinner .decrement-arrow-button:hover{
+	-fx-background-color: #5a5a7a;
+}
+.spinner .increment-arrow, .spinner .decrement-arrow{
+	-fx-background-color: #dcdcdc;
+}
+/*DatePicker */
+.date-picker, .date-picker * {
+	-fx-background-color: #292939;
+	-fx-border-width: 0px;
+}
+.date-picker-display-node, .date-picker:editable .cell, .date-picker:editable .arrow-button, .date-picker .month-year-pane{
+	-fx-background-color: #292939;
+}
+.date-picker:editable .spinner .button:hover{
+	-fx-background-color: #5a5a7a;
+	
+}
+.date-picker:editable .spinner .button{
+	-fx-padding: 2px 4px;
+}
+.date-picker-popup{
+	-fx-backgound-color: transparent;
+}
+.date-picker-popup .left-arrow,
+.date-picker-popup .right-arrow{
+	-fx-background-color: #dcdcdc;
+}
+.date-picker:editable .cell:hover{
+	-fx-background-color: #5a5a7a;
+}
+.date-picker:editable .selected{
+	-fx-background-color: #5a7a7a;
+}
+.date-picker:editable .arrow-button .arrow{
+	-fx-background-color: #cdcdcd;
+}
+.date-picker-popup{
+	-fx-background-color: #292939;
+}
+

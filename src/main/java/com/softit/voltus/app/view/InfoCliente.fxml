@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane prefHeight="560.0" prefWidth="940.0" stylesheets="@voltusStyle.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.softit.voltus.app.controllers.InfoClienteController">
+   <children>
+      <AnchorPane fx:id="pnlInfoPer" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ImageView fx:id="imgFoto" fitHeight="299.0" fitWidth="250.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#imgFotoOnClicked" pickOnBounds="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+               <image>
+                  <Image url="@images/default-user.jpg" />
+               </image></ImageView>
+            <TextField fx:id="txtNombre" layoutX="345.0" layoutY="80.0" prefHeight="25.0" prefWidth="300.0" promptText="Nombre" styleClass="normal-text">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtCI" layoutX="345.0" layoutY="150.0" prefHeight="25.0" prefWidth="300.0" promptText="Carnet de Identidad" styleClass="normal-text">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </TextField>
+            <RadioButton fx:id="rdbMale" layoutX="722.0" layoutY="154.0" mnemonicParsing="false" textFill="GAINSBORO">
+               <toggleGroup>
+                  <ToggleGroup fx:id="sexo" />
+               </toggleGroup>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons8_standing_man_50px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </RadioButton>
+            <RadioButton fx:id="rdbFemale" layoutX="813.0" layoutY="154.0" mnemonicParsing="false" textFill="GAINSBORO" toggleGroup="$sexo">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons8_girl_50px.png" />
+                     </image>
+                  </ImageView>
+               </graphic></RadioButton>
+            <TextField fx:id="txtDireccion" layoutX="345.0" layoutY="220.0" prefHeight="25.0" prefWidth="516.0" promptText="Direccion" styleClass="normal-text" AnchorPane.leftAnchor="345.0" AnchorPane.rightAnchor="79.0">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtOcup" layoutX="345.0" layoutY="290.0" prefHeight="25.0" prefWidth="300.0" promptText="Ocupacion" styleClass="normal-text">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtTelCasa" layoutX="345.0" layoutY="360.0" prefHeight="25.0" prefWidth="152.0" promptText="Telefono Casa" styleClass="normal-text">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtTelMovil" layoutX="537.0" layoutY="360.0" prefHeight="25.0" prefWidth="143.0" promptText="Telefono Movil" styleClass="normal-text">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtTelEmerg" layoutX="723.0" layoutY="360.0" prefHeight="25.0" prefWidth="143.0" promptText="Telefono Emergencia" styleClass="normal-text">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </TextField>
+            <Label fx:id="lblSexo" layoutX="765.0" layoutY="125.0" text="Sexo" textFill="GAINSBORO">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnSig" contentDisplay="RIGHT" layoutX="783.0" layoutY="469.0" mnemonicParsing="false" onAction="#btnSigOnAction" prefHeight="25.0" prefWidth="117.0" styleClass="button-blue" text="Siguiente" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="75.0">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons8_right_50px.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            
+            <Button fx:id="btnEditar" layoutX="68.0" layoutY="334.0" mnemonicParsing="false" onAction="#btnEditarOnAction" prefHeight="52.0" prefWidth="67.0" styleClass="button-green" AnchorPane.leftAnchor="68.0" AnchorPane.topAnchor="334.0">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons8_edit_file_50px.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="btnEliminar" layoutX="155.0" layoutY="334.0" mnemonicParsing="false" onAction="#btnEliminarOnAction" prefHeight="52.0" prefWidth="67.0" styleClass="button-red">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons8_trash_50px.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Label fx:id="lblEdad" layoutX="729.0" layoutY="85.0" prefHeight="15.0" prefWidth="135.0" text="Edad: " textFill="GAINSBORO" AnchorPane.rightAnchor="78.0" AnchorPane.topAnchor="85.0">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pnlInfoTec" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <children>
+            <TextField fx:id="txtCuello" alignment="CENTER_RIGHT" layoutX="100.0" layoutY="80.0" promptText="Cuello">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtCintura" alignment="CENTER_RIGHT" layoutX="100.0" layoutY="150.0" promptText="Cintura">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtCadera" alignment="CENTER_RIGHT" layoutX="100.0" layoutY="220.0" promptText="Cadera" AnchorPane.leftAnchor="100.0">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtPeso" alignment="CENTER_RIGHT" layoutX="396.0" layoutY="80.0" promptText="Peso">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtTalla" alignment="CENTER_RIGHT" layoutX="396.0" layoutY="150.0" promptText="Talla">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtFrecCard" alignment="CENTER_RIGHT" layoutX="692.0" layoutY="80.0" promptText="Freacuencia Cardiaca">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtFrecResp" alignment="CENTER_RIGHT" layoutX="692.0" layoutY="150.0" promptText="Frecuencia Respiratoria">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtMeta" layoutX="396.0" layoutY="220.0" prefHeight="23.0" prefWidth="451.0" promptText="Meta">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </TextField>
+            <Button fx:id="btnFinalizar" layoutX="789.0" layoutY="478.0" mnemonicParsing="false" onAction="#btnFinalizarOnAction" prefHeight="25.0" prefWidth="99.0" styleClass="button-green" text="Finalizar" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="100.0">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/icons8_checkmark_50px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnAtras" layoutX="70.0" layoutY="495.0" mnemonicParsing="false" onAction="#btnAtrasOnAction" prefWidth="77.0" styleClass="button-blue" text="Atras" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="100.0">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" styleClass="button-blue">
+                     <image>
+                        <Image url="@images/icons8_left_50px_1.png" />
+                     </image></ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <VBox layoutX="195.0" layoutY="280.0" prefHeight="180.0" prefWidth="559.0">
+               <children>
+                  <TableView fx:id="tblServicios" editable="true" prefHeight="200.0" prefWidth="546.0">
+                     <columns>
+                        <TableColumn fx:id="colServicio" prefWidth="227.0" text="Servicio" />
+                        <TableColumn fx:id="colFPago" prefWidth="179.0" text="Forma de Pago" />
+                        <TableColumn fx:id="colEstado" prefWidth="152.0" text="Estado" />
+                     </columns></TableView>
+                  <HBox fx:id="pnlEditing" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <ComboBox fx:id="cbxServicio" prefHeight="25.0" prefWidth="182.0" promptText="Servicio" />
+                        <Region prefHeight="23.0" prefWidth="45.0" HBox.hgrow="ALWAYS" />
+                        <Button fx:id="btnAddServicio" mnemonicParsing="false" onAction="#btnAddServicioOnAction" prefHeight="25.0" prefWidth="100.0" styleClass="button-green" text="Adicionar">
+                           <font>
+                              <Font name="Verdana" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/icons8_plus_math_50px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnDelServicio" layoutX="432.0" layoutY="20.0" mnemonicParsing="false" onAction="#btnDelServicioOnAction" prefHeight="25.0" prefWidth="100.0" styleClass="button-red" text="Eliminar">
+                           <font>
+                              <Font name="Verdana" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/icons8_delete_50px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

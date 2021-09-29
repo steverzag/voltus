@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="540.0" prefWidth="940.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.softit.voltus.app.controllers.SalidaController">
+   <children>
+      <Button fx:id="btnSalida" layoutX="810.0" layoutY="495.0" mnemonicParsing="false" onAction="#btnSalidaOnAction" prefHeight="25.0" prefWidth="115.0" text="Salida" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+      <TableView fx:id="tblArticulosAlqs" layoutX="-22.0" layoutY="333.0" prefHeight="160.0" prefWidth="546.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="374.0">
+         <columns>
+            <TableColumn fx:id="colArticulosAlqs" prefWidth="320.0" text="Articulo" />
+            <TableColumn fx:id="colCantidadAlqs" minWidth="0.0" prefWidth="220.0" text="Cantidad" />
+         </columns>
+      </TableView>
+      <TreeTableView fx:id="trtClientesEnGym" layoutX="-48.0" layoutY="101.0" onMouseClicked="#trtClientesEnGymOnClicked" prefHeight="303.0" prefWidth="900.0" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+        <columns>
+          <TreeTableColumn fx:id="trcCliente" prefWidth="267.0" styleClass="column-left" text="Cliente" />
+          <TreeTableColumn fx:id="trcImagen" minWidth="0.0" prefWidth="77.0" text="Imagen" />
+            <TreeTableColumn fx:id="trcEntrada" prefWidth="147.0" text="Entrada" />
+            <TreeTableColumn fx:id="trcServicio" prefWidth="188.0" text="Servicio" />
+            <TreeTableColumn fx:id="trcEstado" prefWidth="214.0" text="Estado" />
+        </columns>
+      </TreeTableView>
+   </children>
+</AnchorPane>

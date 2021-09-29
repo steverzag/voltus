@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="434.0" prefWidth="885.0" stylesheets="@voltusStyle.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.softit.voltus.app.controllers.GlobalEstadisticsController">
+   <children>
+      <ScrollPane layoutX="20.0" layoutY="20.0" prefHeight="380.0" prefWidth="402.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <content>
+            <BarChart fx:id="chartClients" legendVisible="false" prefHeight="336.0" prefWidth="400.0" title="Clientes Activos">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" tickLabelFill="#cdcdcd" tickLabelRotation="-30.0" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" tickLabelFill="#cdcdcd" />
+              </yAxis>
+            </BarChart>
+         </content>
+      </ScrollPane>
+      <ScrollPane layoutX="445.0" layoutY="20.0" prefHeight="380.0" prefWidth="402.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="20.0">
+         <content>
+            <LineChart fx:id="chartFinanzas" prefHeight="336.0" prefWidth="400.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" tickLabelFill="#cdcdcd" tickLabelRotation="-30.0" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" tickLabelFill="#cdcdcd" />
+              </yAxis>
+            </LineChart>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

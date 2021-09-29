@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pnlEntrada" prefHeight="200.0" prefWidth="200.0" stylesheets="@voltusStyle.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.softit.voltus.app.controllers.EntradaController">
+   <children>
+      <Button fx:id="btnEntrada" disable="true" layoutX="841.0" layoutY="495.0" mnemonicParsing="false" onAction="#btnEntradaOnAction" prefHeight="25.0" prefWidth="120.0" text="Dar Entrada" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8_enter_50px.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <TextField fx:id="txtBuscar" layoutX="22.0" layoutY="24.0" onAction="#txtBuscarOnAction" prefHeight="25.0" prefWidth="330.0" promptText="Cliente" styleClass="main-input" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btnBuscar" layoutX="374.0" layoutY="20.0" mnemonicParsing="false" onAction="#btnBuscarOnAction" prefHeight="25.0" prefWidth="65.0" styleClass="btn-buscar" textFill="DARKGRAY" AnchorPane.leftAnchor="374.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="imgFoto" fitHeight="420.0" fitWidth="330.0" layoutX="165.0" layoutY="120.0" pickOnBounds="true" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="590.0" AnchorPane.topAnchor="100.0" />
+      <TableView fx:id="tblServicios" layoutX="367.0" layoutY="100.0" onMouseClicked="#tblServiciosOnClicked" prefHeight="200.0" prefWidth="546.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="100.0">
+         <columns>
+            <TableColumn fx:id="colServicio" prefWidth="241.0" text="Servicio" />
+            <TableColumn fx:id="colPago" prefWidth="155.0" text="Forma de Pago" />
+            <TableColumn fx:id="colActivo" prefWidth="139.0" text="Estado" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnMemb" disable="true" layoutX="620.0" layoutY="487.0" mnemonicParsing="false" onAction="#btnMembOnAction" prefHeight="25.0" prefWidth="168.0" text="Cobro de Membresia" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="152.0">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8_receive_cash_50px.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <ComboBox fx:id="cbxPago" disable="true" layoutX="374.0" layoutY="495.0" onAction="#cbxPagoOnAction" prefHeight="25.0" prefWidth="152.0" promptText="Forma de Pago" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="414.0" />
+      <Label fx:id="lblCash" layoutX="541.0" layoutY="499.0" prefHeight="17.0" prefWidth="68.0" AnchorPane.bottomAnchor="24.0" AnchorPane.rightAnchor="331.0" />
+      <Label fx:id="lblInfo" layoutX="374.0" layoutY="443.0" prefHeight="20.0" prefWidth="388.0" visible="false" AnchorPane.bottomAnchor="77.0" AnchorPane.rightAnchor="178.0">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8_checkmark_yes_32px_1.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <Label fx:id="lblDetails" layoutX="374.0" layoutY="468.0" prefHeight="17.0" prefWidth="320.0" text="Detalles Aqui." underline="true" visible="false" AnchorPane.bottomAnchor="55.0" AnchorPane.rightAnchor="246.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+   </children>
+</AnchorPane>

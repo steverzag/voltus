@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="450.0" prefWidth="900.0" stylesheets="@voltusStyle.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.softit.voltus.app.controllers.CierreGeneratorController">
+   <children>
+      <Label fx:id="lblGastos" layoutX="428.0" layoutY="94.0" text="Gastos Adicionales: " AnchorPane.rightAnchor="349.0" AnchorPane.topAnchor="94.0" />
+      <Label layoutX="20.0" layoutY="94.0" text="Salarios: " AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="94.0" />
+      <Button fx:id="btnAceptar" layoutX="792.0" layoutY="411.0" mnemonicParsing="false" onAction="#btnAceptarOnAction" prefHeight="25.0" prefWidth="88.0" text="Aceptar" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="20.0">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8_checkmark_50px.png" />
+               </image></ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnVista" layoutX="666.0" layoutY="411.0" mnemonicParsing="false" onAction="#btnVistaOnAction" prefHeight="25.0" prefWidth="110.0" text="Vista Previa" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="124.0">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8_view_50px.png" />
+               </image></ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnAddSalario" layoutX="318.0" layoutY="94.0" mnemonicParsing="false" onAction="#btnAddSalarioOnAction" />
+      <Button fx:id="btnAddGasto" layoutX="849.0" layoutY="94.0" mnemonicParsing="false" onAction="#btnAddGastoOnAction" />
+      <VBox layoutX="20.0" layoutY="113.0" prefHeight="224.0" prefWidth="330.0" AnchorPane.bottomAnchor="113.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="113.0">
+         <children>
+            <TableView fx:id="tblSalarios" prefHeight="200.0" prefWidth="546.0">
+               <columns>
+                  <TableColumn fx:id="colAsalariado" prefWidth="219.0" text="Asalariado" />
+                  <TableColumn fx:id="colValorSalario" minWidth="0.0" prefWidth="94.0" text="Valor" />
+               </columns>
+            </TableView>
+            <HBox prefHeight="40.0" prefWidth="546.0" spacing="20.0">
+               <children>
+                  <TextField fx:id="txtAsalariado" onAction="#btnAddSalarioOnAction" prefHeight="25.0" prefWidth="171.0" promptText="Asalariado" />
+                  <Button mnemonicParsing="false" onAction="#btnAddSalarioOnAction" prefHeight="25.0" prefWidth="70.0" text="Add" />
+                  <Button layoutX="419.0" layoutY="20.0" mnemonicParsing="false" onAction="#btnDelSalarioOnAction" prefHeight="25.0" prefWidth="71.0" text="Del" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="430.0" layoutY="113.0" prefHeight="224.0" prefWidth="452.0" AnchorPane.bottomAnchor="113.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="113.0">
+         <children>
+            <TableView fx:id="tblGastos" prefHeight="200.0" prefWidth="546.0">
+               <columns>
+                  <TableColumn fx:id="colObsGastos" prefWidth="356.0" text="Observacion" />
+                  <TableColumn fx:id="colValorGastos" minWidth="0.0" prefWidth="77.0" text="Valor" />
+               </columns>
+            </TableView>
+            <HBox prefHeight="40.0" prefWidth="546.0" spacing="20.0">
+               <children>
+                  <TextField fx:id="txtObs" onAction="#btnAddGastoOnAction" prefHeight="25.0" prefWidth="272.0" promptText="Observacion" />
+                  <Button mnemonicParsing="false" onAction="#btnAddGastoOnAction" prefHeight="25.0" prefWidth="70.0" text="Add" />
+                  <Button layoutX="419.0" layoutY="20.0" mnemonicParsing="false" onAction="#btnDelGastoOnAction" prefHeight="25.0" prefWidth="71.0" text="Del" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+      <Button layoutX="849.0" layoutY="367.0" mnemonicParsing="false" onAction="#btnUbicacionOnAction" prefHeight="25.0" prefWidth="29.0" text="..." />
+      <Label layoutX="428.0" layoutY="372.0" text="Ubicacion:" />
+      <TextField fx:id="txtUbicacion" layoutX="495.0" layoutY="367.0" onKeyTyped="#txtUbicacinoOnTyped" prefHeight="25.0" prefWidth="348.0" />
+      <ImageView fx:id="imgGif" fitHeight="120.0" fitWidth="200.0" layoutX="350.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@images/35771931234507.564a1d2403b3a.gif" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="900.0" stylesheets="@voltusStyle.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.softit.voltus.app.controllers.CuadreMensualBoardController">
+   <children>
+      <Label fx:id="lblFecha" layoutX="10.0" layoutY="14.0" text="Fecha de Creacion: " AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <PieChart fx:id="pieIngresos" clockwise="false" labelsVisible="false" layoutX="14.0" layoutY="113.0" prefHeight="235.0" prefWidth="409.0" title="Mov. de Efectivo" />
+      <Label fx:id="lblDiasH" layoutX="10.0" layoutY="68.0" prefHeight="17.0" text="Dias Habiles: " />
+      <Label fx:id="lblClientesAct" layoutX="210.0" layoutY="69.0" text="Clientes Activos: " />
+      <Label layoutX="542.0" layoutY="128.0" text="Horarios Mas Concurridos">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label fx:id="lblHorario1" layoutX="542.0" layoutY="168.0">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label fx:id="lblHorario2" layoutX="542.0" layoutY="208.0">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label fx:id="lblHorario3" layoutX="542.0" layoutY="248.0">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Button fx:id="btnVerPDF" layoutX="747.0" layoutY="410.0" mnemonicParsing="false" onAction="#btnVerPDFOnAction" prefHeight="25.0" prefWidth="162.0" text="Ver Documento PDF" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="0.0">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/icons8_pdf_50px.png" />
+               </image></ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
